@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AmazonApp Test" parallel="methods" thread-count="1">
+
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="cloudEnv" value="local"/>
+    <parameter name="os" value="Windows"/>
+    <parameter name="os_version" value="Sierra"/>
+    <parameter name="resolution" value="1024x768"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="browserVersion" value="55.0"/>
+    <parameter name="url" value="http://www.amazon.ca"/>
+    <parameter name="testName" value="TestAmazonApp"/>
+
+
+    <test name = "Amazon Home Page">
+        <classes>
+            <class name="TestSearch.TestUsingItems"/>
+            <class name="TestHomePage.TestNavigationBar"/>
+            <class name="TestSearch.TestUsingASIN"/>
+            <class name="TestSignIn.TestAmazonSignIn"/>
+            <class name="TestCart.TestCartUsingASIN"/>
+        </classes>
+    </test>
+
+</suite>
